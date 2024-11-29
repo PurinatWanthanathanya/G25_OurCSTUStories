@@ -218,7 +218,7 @@ section {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     position: relative;
     background-color: inherit;
     border-radius: 15px;
@@ -228,14 +228,14 @@ section {
 .left {
     margin-left: 10%;
     border: 3px solid #185c6f;
-    width: 800px;
+    max-width: 800px;
     flex-direction: row;
 }
 
 .right {
-    margin-left: 35%;
+    margin-left: 40%;
     border: 3px solid #5ac6c8;
-    width: 800px;
+    max-width: 800px;
     flex-direction: row-reverse;
     
 }
@@ -257,7 +257,7 @@ section {
     border-width: 10px;
     border-color: transparent rgb(218, 223, 231) transparent transparent;
     top: 30px;
-    left: -19px;
+    left: -18px;
     transform: translateY(-50%);
 }
 
@@ -265,7 +265,7 @@ section {
     border-top: 10px solid transparent;
     border-color: transparent transparent transparent rgb(218, 223, 231);
     left: auto;
-    right: -19px;
+    right: -18px;
     transform: translateY(-50%);
 }
 
@@ -299,12 +299,23 @@ section {
     min-height: 100vh;
 }
 
+
+
+
+
+
+
+
+
+
+/* Device media queries */
+
 /* tablet */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
     .container {
         flex-direction: column;
         width: 90%;
-        margin: 10px auto;
+        margin: 15px auto;
         text-align: center;
     }
 
@@ -344,5 +355,14 @@ section {
     .idiom {
         padding: 30px;
         font-size: 1.2rem;
+    }
+    
+    .container img {
+        border-radius: 15px;
+        max-width: 200px;
+        width: auto;
+        height: auto;
+        margin-right: 25px;
+        margin-left: 25px;
     }
 }
