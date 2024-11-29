@@ -1,21 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* header-nav */
-ul{
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
 }
 
-header{
-    position:absolute;
+header {
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
@@ -27,77 +27,83 @@ header{
     padding: 2rem 6rem 0;
 }
 
-header a{
+header a {
     text-transform: capitalize;
     font-weight: 900;
 }
-header a:hover{
-    color:#b1b1b1;
+
+header a:hover {
+    color: #b1b1b1;
     transition: all .5s;
 }
 
-header .logo img{
+header .logo img {
     width: 50px;
     max-width: 150px;
     height: auto;
 }
 
-header .logo img:hover{
-    opacity: 0.8;    
+header .logo img:hover {
+    opacity: 0.8;
 }
 
-header .nav{
+header .nav {
     display: flex;
 }
-header .nav li{
+
+header .nav li {
     margin: 0 1rem;
 }
-header .nav li:first-child{
+
+header .nav li:first-child {
     margin-left: 0;
 }
-header .nav li:last-child{
-    margin-right: 0 ;
+
+header .nav li:last-child {
+    margin-right: 0;
 }
 
-@media (max-width:1000px){
-    header{
-        padding:1rem 3rem;
+@media (max-width:1000px) {
+    header {
+        padding: 1rem 3rem;
     }
 }
 
-@media (max-width:700px){
-    header{
+@media (max-width:700px) {
+    header {
         flex-direction: column;
     }
-    header .logo{
+
+    header .logo {
         margin-bottom: 1rem;
     }
-    header .nav li{
+
+    header .nav li {
         margin: 0 7px;
     }
 }
 
 /* ส่วนหน้าแรกสุด */
-section{
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 7rem 6rem;
 }
 
-@media (max-width:1000px){
-    section{
+@media (max-width:1000px) {
+    section {
         padding: 6rem 3rem;
     }
 }
 
-@media (max-width:600px){
-    section{
+@media (max-width:600px) {
+    section {
         padding: 8rem 2rem;
     }
 }
 
-.box{
+.box {
     position: relative;
     justify-content: center;
     min-height: 100vh;
@@ -105,8 +111,8 @@ section{
     text-align: center;
 }
 
-.box video{
-    position:absolute;
+.box video {
+    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
@@ -115,45 +121,63 @@ section{
     z-index: -1;
 }
 
-.box h1{
+.box h1 {
     margin-bottom: 1.5rem;
     font-size: 50pt;
     text-transform: uppercase;
-    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.box h1:hover{
+.box h1:hover {
     -webkit-text-stroke: 1px #fff;
-    color:transparent;
+    color: transparent;
     transition: all .25s;
 }
 
-.box h3{
+.box h3 {
     margin-bottom: 3rem;
     font-size: 20pt;
-    -webkit-box-reflect: below 1px linear-gradient(transparent,#000);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #000);
     line-height: 0.35em;
     outline: none;
     animation: animate 10s linear infinite;
 }
 
-@keyframes animate{
-    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
-    {
-        color:#0e3742;
+@keyframes animate {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: #0e3742;
         text-shadow: none;
     }
-    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
-        color:#fff;
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    65%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
         text-shadow: 0 0 10px #03bcf4,
-        0 0 20px #03bcf4,
-        0 0 40px #03bcf4,
-        0 0 80px #03bcf4,
-        0 0 100px #03bcf4;
+            0 0 20px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 80px #03bcf4,
+            0 0 100px #03bcf4;
     }
 }
 
-.box a.boxBtn{
+.box a.boxBtn {
     padding: 1rem 2rem;
     background: transparent;
     border-radius: 50px;
@@ -163,22 +187,25 @@ section{
     transition: all .5s;
 }
 
-.box a.boxBtn:hover{
+.box a.boxBtn:hover {
     background: #fff;
     color: #333;
 }
 
-@media (max-width:800px){
-    .box{
+@media (max-width:800px) {
+    .box {
         min-height: 600px;
     }
-    .box h1{
+
+    .box h1 {
         font-size: 25pt;
     }
-    .box h3{
+
+    .box h3 {
         font-size: 14pt;
     }
-    .box a.boxBtn{
+
+    .box a.boxBtn {
         padding: 1rem 3rem;
     }
 }
@@ -186,41 +213,136 @@ section{
 
 
 
-
-/* ส่วน OurFuture */
-.container{
+/* ส่วนของ OurFutureHilights */
+.container {
+    display: flex;
+    align-items: center;
     padding: 10px 20px;
     margin-bottom: 10px;
     position: relative;
     background-color: inherit;
-    width: 50%;
     border-radius: 15px;
+    width: 50%;
 }
 
 .left {
-    left: 10%;
+    margin-left: 10%;
+    border: 3px solid #185c6f;
+    width: 800px;
+    flex-direction: row;
 }
 
 .right {
-    left: 35%;
+    margin-left: 35%;
+    border: 3px solid #5ac6c8;
+    width: 800px;
+    flex-direction: row-reverse;
+    
 }
 
 .textbox {
-    background-color: rgb(248, 248, 248);
-    position: relative;
+    background-color: rgb(218, 223, 231);
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    padding: 40px;
+    opacity: 95%;
+    width: 100%;
+    position: relative;
 }
 
-.idiom{
-    margin: 100px;
+/* ลูกศรกล่องคำพูด */
+.textbox::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent rgb(218, 223, 231) transparent transparent;
+    top: 30px;
+    left: -19px;
+    transform: translateY(-50%);
+}
+
+.right .textbox::before {
+    border-top: 10px solid transparent;
+    border-color: transparent transparent transparent rgb(218, 223, 231);
+    left: auto;
+    right: -19px;
+    transform: translateY(-50%);
+}
+
+.container img {
+    border-radius: 15px;
+    max-width: 200px;
+    width: auto;
+    height: auto;
+    margin-right: 25px;
+}
+
+.right img {
+    margin-right: 0;
+    margin-left: 25px;
+}
+
+.idiom {
+    margin-bottom: 80px;
+    margin-top: 150px;
     text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
 }
 
-.OFH{
+.OFH {
     background-image: url(resources/pxfuel.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .textbox {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .textbox::before {
+        border-color: transparent transparent transparent transparent;
+    }
+
+    .right .textbox::before {
+        border-color: transparent transparent transparent transparent;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .textbox {
+        padding: 20px;
+    }
+
+    .textbox::before {
+        border-color: transparent transparent transparent transparent;
+    }
+
+    .right .textbox::before {
+        border-color: transparent transparent transparent transparent;
+    }
+
+    .idiom {
+        padding: 30px;
+        font-size: 1.2rem;
+    }
 }
