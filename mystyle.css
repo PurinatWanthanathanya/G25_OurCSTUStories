@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* header-nav */
@@ -512,7 +513,27 @@ footer .footer-content h4{
     margin-bottom: 100px;
 }
 
+.uparrow{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 8px 8px;
+    background-color: white;
+    color: #000;
+    border-radius: 5px;
+    border-radius: 1px solid #fff;
+    cursor: pointer;
+    transition: all 0.25s ease 0s;
+}
+.uparrow img {
+    width: 15px;
+    margin-left: 5px;
+}
 
+.uparrow:hover {
+    opacity: 0.5;
+    padding: 3px 5px;
+}
 
 
 
