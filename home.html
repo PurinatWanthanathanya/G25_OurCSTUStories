@@ -102,10 +102,10 @@
                         <div class="form-group">
                             <label for="gender">เพศ</label>
                             <div class="radio-group">
-                                <label><input type="radio" name="gender" value="male"> ชาย</label>
-                                <label><input type="radio" name="gender" value="female"> หญิง</label>
-                                <label><input type="radio" name="gender" value="other"> อื่น ๆ</label>
-                                <label><input type="radio" name="gender" value="not_specified"> ไม่ประสงค์บอก</label>
+                                <label><input type="radio" name="gender" value="ชาย"> ชาย</label>
+                                <label><input type="radio" name="gender" value="หญิง"> หญิง</label>
+                                <label><input type="radio" name="gender" value="อื่น ๆ"> อื่น ๆ</label>
+                                <label><input type="radio" name="gender" value="ไม่ประสงค์บอก"> ไม่ประสงค์บอก</label>
                             </div>
                         </div>
                         <!-- Email -->
@@ -119,12 +119,12 @@
                             <label for="satisfaction">ความพึงพอใจต่อเว็บไซต์</label>
                             <select name="satisfaction" id="satisfaction">
                                 <option value="" disabled selected>Select an option</option>
-                                <option value="Excellence ">ดีเยี่ยม</option>
-                                <option value="Good">ดีมาก </option>
-                                <option value="Fair">พอใช้ </option>
-                                <option value="Improvement">ปรับปรุง </option>
-                                <option value="Poor">ไม่พอใจ</option>
-                            </select>   
+                                <option value="ดีเยี่ยม ">ดีเยี่ยม</option>
+                                <option value="ดีมาก">ดีมาก </option>
+                                <option value="พอใช้">พอใช้ </option>
+                                <option value="ปรับปรุง">ปรับปรุง </option>
+                                <option value="ไม่พอใจ">ไม่พอใจ</option>
+                            </select>
                         </div>
                         <!-- Description -->
                         <div class="form-group">
@@ -136,6 +136,10 @@
                             <input type="submit" value="Submit" />
                         </div>
                     </form>
+                </div>
+                <div class="display-area_container">
+                    <h1> All Guests</h1>
+                    <div id="display-area"></div>
                 </div>
             </article>
         </div>

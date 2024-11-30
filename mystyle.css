@@ -218,66 +218,89 @@ section {
     padding: 20px;
     border: 1px solid #c62922;
     border-radius: 5px;
-  }
-  
-  .form-container h1 {
+}
+
+.form-container h1 {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .form-group {
+}
+
+.form-group {
     margin-bottom: 15px;
-  }
-  
-  .form-group label {
+}
+
+.form-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 10px;
-  }
-  
-  .form-group input[type="text"],
-  .form-group input[type="email"],
-  .form-group select,
-  .form-group textarea{
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-  }
-  
-  .form-group input[type="radio"]{
+}
+
+.form-group input[type="radio"] {
     flex-direction: column;
     align-items: center;
-  }
-  
-  .form-group textarea {
+}
+
+.form-group textarea {
     resize: vertical;
-  }
-  
-  .form-group select {
+}
+
+.form-group select {
     width: 100%;
-  }
-  
-  .form-group input[type="submit"] {
+}
+
+.form-group input[type="submit"] {
     background-color: #ca6f25;
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .form-group {
+}
+
+.form-group {
     position: relative;
-  }
-  
-  .error {
+}
+
+.error {
     color: darkred;
     display: block;
     margin-top: 5px;
-  }
-  
+}
+
+#display-area {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#display-area p {
+  margin: 5px 0;
+}
+
+.display-area_container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #c62922;
+    border-radius: 5px;
+}
+
+.display-area_container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 /* ส่วนของ OurFutureHilights */
 .container {
     display: flex;
@@ -302,7 +325,7 @@ section {
     border: 3px solid #5ac6c8;
     max-width: 800px;
     flex-direction: row-reverse;
-    
+
 }
 
 .textbox {
@@ -421,7 +444,7 @@ section {
         padding: 30px;
         font-size: 1.2rem;
     }
-    
+
     .container img {
         border-radius: 15px;
         max-width: 200px;
