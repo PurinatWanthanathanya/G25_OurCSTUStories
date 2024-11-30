@@ -210,6 +210,63 @@ section {
     }
 }
 
+/* ส่วนของ footer */
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 3.5rem;
+    background: #1a242f;
+    padding: 1rem;
+}
+
+footer .footer-content h4{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.footer-content img{
+    width:40px;
+    vertical-align: middle;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    margin-left: 1rem;
+}
+
+.footer-content h3{
+    display:inline;
+    font-size: 16px;
+    margin: 0;
+    color: #fff;
+
+}
+
+.footer-content p{
+    color: #fff;
+
+}
+
+.footer-content a{
+    color: #fff;
+    margin-right: .5rem;
+}
+
+.footer-content a::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition-duration: .5s;
+}
+
+.footer-content a::hover::before{
+    width: 70px;
+}
 /*ส่วนของ form*/
 
 .form-container {
