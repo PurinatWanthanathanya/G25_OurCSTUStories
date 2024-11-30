@@ -341,10 +341,12 @@ footer .footer-content h4{
 .form-container h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: whitesmoke;
 }
 
 .form-group {
     margin-bottom: 15px;
+    color: whitesmoke;
 }
 
 .form-group label {
@@ -405,6 +407,7 @@ footer .footer-content h4{
 
 #display-area p {
   margin: 5px 0;
+  color: whitesmoke;
 }
 
 .display-area_container {
@@ -418,6 +421,7 @@ footer .footer-content h4{
 .display-area_container h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: whitesmoke;
 }
 /* ส่วนของ OurFutureHilights */
 .container {

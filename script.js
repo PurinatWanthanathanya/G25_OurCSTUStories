@@ -17,7 +17,7 @@ var swiper = new Swiper(".mySwiper", {
 // ส่วนของ form
 const form = document.getElementById('form');
 const entries = [];
-
+let entryCount = 1; 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
@@ -48,22 +48,26 @@ form.addEventListener('submit', (event) => {
 
   if (isValid) {
     const newEntry = {
+      count: entryCount,
       fullname,
       gender,
       email,
       satisfaction,
       description,
     };
+    entryCount++;
     entries.push(newEntry);
 
     const displayArea = document.getElementById('display-area');
     const entryElement = document.createElement('div');
     entryElement.innerHTML = `
+      <p><strong>ผู้เยี่ยมชมคนที่:</strong> ${newEntry.count}</p>
       <p><strong>ชื่อ-นามสกุล:</strong> ${newEntry.fullname}</p>
       <p><strong>Gender:</strong> ${newEntry.gender}</p>
       <p><strong>เพศ:</strong> ${newEntry.email}</p>
       <p><strong>ความพึงพอใจต่อเว็บไซต์:</strong> ${newEntry.satisfaction}</p>
       <p><strong>ข้อเสนอแนะ / ความคิดเห็น:</strong> ${newEntry.description}</p>
+      <p>=====================================================</p>
     `;
     displayArea.appendChild(entryElement);
 
