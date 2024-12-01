@@ -564,32 +564,42 @@ footer .footer-content h4{
     margin-bottom: 100px;
 }
 
-.uparrow{
+/* ปุ่มเลื่อนกลับ */
+
+.backtotopbutton{
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    padding: 8px 8px;
-    background-color: white;
-    color: #000;
-    border-radius: 5px;
-    border-radius: 1px solid #fff;
+    bottom: 20px;
+    right: 20px;
+    background-color: #332d2db9;
+    color:#fff;
+    padding: .75rem 1.25rem;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
+    text-transform: capitalize;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: all 0.25s ease 0s;
 }
-.uparrow img {
-    width: 15px;
-    margin-left: 5px;
+
+.backtotopbutton img{
+    width: 1rem;
+    display: none;
 }
 
-.uparrow:hover {
-    opacity: 0.5;
-    padding: 3px 5px;
+.backtotopbutton:hover{
+    background-color: #c01313;
+    opacity: 0.8;
+    padding: 10px 14px;
 }
 
-
-
-
-
+@media (max-width:720px){
+    .backtotopbutton img{
+        display: block;
+    }
+    .backtotopbutton p{
+        display: none;
+    }
+}
 
 
 /* Device media queries */
