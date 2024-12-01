@@ -40,6 +40,11 @@ form.addEventListener('submit', (event) => {
   }
 
   if (isValid) {
+    const confirmSubmission = confirm('คุณต้องการยืนยันข้อมูลหรือไม่?');
+    if (!confirmSubmission) {
+      return;
+    }
+
     const gender = genderElement.value;
 
     const newEntry = {
