@@ -556,6 +556,12 @@ footer .footer-content h4{
 
 
 /* index */
+body {
+    font-family: 'Kanit', sans-serif;
+    background: #bdc3c7;
+    color: #34495e;
+  }
+
 .containerdata{
     height: 100vh;
     width: 100%;
@@ -652,3 +658,4 @@ footer .footer-content h4{
     left: unset;
     right: 400px;
 }
+
