@@ -2,35 +2,46 @@
 const form = document.getElementById('form');
 const entries = [];
 let entryCount = 1;
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   const fullname = document.getElementById('fullname').value.trim();
-  const gender = document.querySelector('input[name="gender"]:checked').value;
+  const genderElement = document.querySelector('input[name="gender"]:checked');
   const email = document.getElementById('email').value.trim();
   const satisfaction = document.getElementById('satisfaction').value;
   const description = document.getElementById('description').value;
 
-  const isValid = true;
+  let isValid = true;
+
+  // Validate fullname
   if (fullname.split(' ').length !== 2) {
     alert('กรุณากรอกชื่อ-นามสกุลให้ถูกต้อง');
     isValid = false;
   }
+
+  // Validate email
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     alert('กรุณาใส่อีเมลล์ให้ถูกต้อง');
     isValid = false;
   }
-  if (!gender) {
+
+  // Validate gender
+  if (!genderElement) {
     alert('กรุณาเลือกเพศของคุณ');
     isValid = false;
   }
+
+  // Validate satisfaction
   if (!satisfaction) {
     alert('โปรดเลือกความพึงพอใจต่อเว็บไซต์');
     isValid = false;
   }
 
   if (isValid) {
+    const gender = genderElement.value;
+
     const newEntry = {
       count: entryCount,
       fullname,
@@ -42,19 +53,21 @@ form.addEventListener('submit', (event) => {
     entryCount++;
     entries.push(newEntry);
 
+    // Display the new entry
     const displayArea = document.getElementById('display-area');
     const entryElement = document.createElement('div');
     entryElement.innerHTML = `
       <p><strong>ผู้เยี่ยมชมคนที่:</strong> ${newEntry.count}</p>
       <p><strong>ชื่อ-นามสกุล:</strong> ${newEntry.fullname}</p>
-      <p><strong>Gender:</strong> ${newEntry.gender}</p>
-      <p><strong>เพศ:</strong> ${newEntry.email}</p>
+      <p><strong>เพศ:</strong> ${newEntry.gender}</p>
+      <p><strong>อีเมล:</strong> ${newEntry.email}</p>
       <p><strong>ความพึงพอใจต่อเว็บไซต์:</strong> ${newEntry.satisfaction}</p>
       <p><strong>ข้อเสนอแนะ / ความคิดเห็น:</strong> ${newEntry.description}</p>
-      <p>=======================================</p>
+      <hr>
     `;
     displayArea.appendChild(entryElement);
 
+    // Reset form
     form.reset();
   }
 });

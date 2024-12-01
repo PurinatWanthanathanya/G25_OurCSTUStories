@@ -50,7 +50,6 @@ header .logo img:hover {
 
 header .nav {
     display: flex;
-    font-size: 18px;
 }
 
 header .nav li {
@@ -65,60 +64,23 @@ header .nav li:last-child {
     margin-right: 0;
 }
 
-header .toggle_btn{
-    color: #fff;
-    font-size: 2rem;
-    cursor: pointer;
-    display: none;
-}
-
-header .dropdown_menu{
-    position: absolute;
-    right: 2rem;
-    top: 60px;
-    height: 0px;
-    width: 200px;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4px);
-    border-radius: 10px;
-    overflow: hidden;
-    font-size: 14px;
-    display: none;
-    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-header .dropdown_menu.open{
-    height: 120px;
-}
-
-header .dropdown_menu li{
-    padding: 0.7rem;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
 @media (max-width:1000px) {
     header {
         padding: 1rem 3rem;
     }
-    header .nav{
-        display: none;
-    }
-
-    header .toggle_btn{
-        display: block;
-    }
-
-    header .dropdown_menu{
-        display: block;
-    }
 }
 
-@media (max-width:578px){
-    header .dropdown_menu{
-        left: 2rem;
-        width: unset;
+@media (max-width:700px) {
+    header {
+        flex-direction: column;
+    }
+
+    header .logo {
+        margin-bottom: 1rem;
+    }
+
+    header .nav li {
+        margin: 0 7px;
     }
 }
 
@@ -459,7 +421,8 @@ footer .footer-content h4{
 
 #display-area p {
   margin: 5px 0;
-  color: #f5f5f5;
+  color: whitesmoke;
+
 }
 
 .display-area_container {
@@ -485,20 +448,6 @@ footer .footer-content h4{
     background-color: inherit;
     border-radius: 15px;
     width: 50%;
-    animation: appear 5s linear;
-    animation-timeline: view() ;
-    animation-range: entry 0% cover 25%;
-}
-
-@keyframes appear {
-    from{
-        opacity: 0;
-        scale: 0.5;
-    }
-    to{
-        opacity: 1;
-        scale: 1;
-    }
 }
 
 .left {
@@ -578,42 +527,32 @@ footer .footer-content h4{
     margin-bottom: 100px;
 }
 
-/* ปุ่มเลื่อนกลับ */
-
-.backtotopbutton{
+.uparrow{
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #332d2db9;
-    color:#fff;
-    padding: .75rem 1.25rem;
-    border: none;
-    border-radius: 10px;
+    bottom: 30px;
+    right: 30px;
+    padding: 8px 8px;
+    background-color: white;
+    color: #000;
+    border-radius: 5px;
+    border-radius: 1px solid #fff;
     cursor: pointer;
-    text-transform: capitalize;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: all 0.25s ease 0s;
 }
-
-.backtotopbutton img{
-    width: 1rem;
-    display: none;
+.uparrow img {
+    width: 15px;
+    margin-left: 5px;
 }
 
-.backtotopbutton:hover{
-    background-color: #c01313;
-    opacity: 0.8;
-    padding: 10px 14px;
+.uparrow:hover {
+    opacity: 0.5;
+    padding: 3px 5px;
 }
 
-@media (max-width:720px){
-    .backtotopbutton img{
-        display: block;
-    }
-    .backtotopbutton p{
-        display: none;
-    }
-}
+
+
+
+
 
 
 /* Device media queries */
