@@ -75,14 +75,14 @@ header .toggle_btn{
 header .dropdown_menu{
     position: absolute;
     right: 2rem;
-    top: 60px;
+    top: 70px;
     height: 0px;
     width: 200px;
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4px);
     border-radius: 10px;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 18px;
     display: none;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -119,6 +119,7 @@ header .dropdown_menu li{
     header .dropdown_menu{
         left: 2rem;
         width: unset;
+        font-size: 15px;
     }
 }
 
@@ -218,7 +219,7 @@ section {
 }
 
 .box a.boxBtn {
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
     background: transparent;
     border-radius: 50px;
     color: #fff;
@@ -233,22 +234,39 @@ section {
 }
 
 @media (max-width:800px) {
+    /* ปรับขนาดวิดีโอ */
     .box {
-        min-height: 600px;
+        height: fit-content;
     }
 
     .box h1 {
-        font-size: 25pt;
+        font-size: 44px;
     }
 
     .box h3 {
-        font-size: 14pt;
+        font-size: 28px;
     }
 
     .box a.boxBtn {
-        padding: 1rem 3rem;
+        padding: 1rem 2rem;
     }
 }
+
+@media (max-width:480px) {
+    .box h1 {
+        font-size: 34px;
+    }
+
+    .box h3 {
+        font-size: 20px;
+    }
+
+    .box a.boxBtn {
+        padding: .5rem 1rem;
+    }
+}
+}
+
 /*home.html ของแต่ละคน*/
 
 .contianerdata{
