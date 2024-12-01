@@ -12,70 +12,71 @@ form.addEventListener('submit', (event) => {
   const satisfaction = document.getElementById('satisfaction').value;
   const description = document.getElementById('description').value;
 
-  let isValid = true;
+  const errors = [];
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   // Validate fullname
-  if (fullname.split(' ').length !== 2) {
-    alert('กรุณากรอกชื่อ-นามสกุลให้ถูกต้อง');
-    isValid = false;
+  if (fullname.split(' ').filter(part => part).length !== 2) {
+    errors.push('กรุณากรอกชื่อ-นามสกุลให้ถูกต้อง');
   }
 
   // Validate email
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    alert('กรุณาใส่อีเมลล์ให้ถูกต้อง');
-    isValid = false;
+    errors.push('กรุณาใส่อีเมลล์ให้ถูกต้อง');
   }
 
   // Validate gender
   if (!genderElement) {
-    alert('กรุณาเลือกเพศของคุณ');
-    isValid = false;
+    errors.push('กรุณาเลือกเพศของคุณ');
   }
 
   // Validate satisfaction
   if (!satisfaction) {
-    alert('โปรดเลือกความพึงพอใจต่อเว็บไซต์');
-    isValid = false;
+    errors.push('โปรดเลือกความพึงพอใจต่อเว็บไซต์');
   }
 
-  if (isValid) {
-    const confirmSubmission = confirm('คุณต้องการยืนยันข้อมูลหรือไม่?');
-    if (!confirmSubmission) {
-      return;
-    }
-
-    const gender = genderElement.value;
-
-    const newEntry = {
-      count: entryCount,
-      fullname,
-      gender,
-      email,
-      satisfaction,
-      description,
-    };
-    entryCount++;
-    entries.push(newEntry);
-
-    // Display the new entry
-    const displayArea = document.getElementById('display-area');
-    const entryElement = document.createElement('div');
-    entryElement.innerHTML = `
-      <p><strong>ผู้เยี่ยมชมคนที่:</strong> ${newEntry.count}</p>
-      <p><strong>ชื่อ-นามสกุล:</strong> ${newEntry.fullname}</p>
-      <p><strong>เพศ:</strong> ${newEntry.gender}</p>
-      <p><strong>อีเมล:</strong> ${newEntry.email}</p>
-      <p><strong>ความพึงพอใจต่อเว็บไซต์:</strong> ${newEntry.satisfaction}</p>
-      <p><strong>ข้อเสนอแนะ / ความคิดเห็น:</strong> ${newEntry.description}</p>
-      <hr>
-    `;
-    displayArea.appendChild(entryElement);
-
-    // Reset form
-    form.reset();
+  if (errors.length > 0) {
+    alert(errors.join('\n'));
+    return;
   }
+
+  const confirmSubmission = confirm('คุณต้องการยืนยันข้อมูลหรือไม่?');
+  if (!confirmSubmission) {
+    return;
+  }
+
+  const gender = genderElement.value;
+
+  const newEntry = {
+    count: entryCount,
+    fullname,
+    gender,
+    email,
+    satisfaction,
+    description,
+  };
+  entryCount++;
+  entries.push(newEntry);
+
+  // Display the new entry
+  const displayArea = document.getElementById('display-area');
+  const sanitize = (str) => str.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const entryElement = document.createElement('div');
+  entryElement.innerHTML = `
+    <p><strong>ผู้เยี่ยมชมคนที่:</strong> ${newEntry.count}</p>
+    <p><strong>ชื่อ-นามสกุล:</strong> ${sanitize(newEntry.fullname)}</p>
+    <p><strong>เพศ:</strong> ${sanitize(newEntry.gender)}</p>
+    <p><strong>อีเมล:</strong> ${sanitize(newEntry.email)}</p>
+    <p><strong>ความพึงพอใจต่อเว็บไซต์:</strong> ${sanitize(newEntry.satisfaction)}</p>
+    <p><strong>ข้อเสนอแนะ / ความคิดเห็น:</strong> ${sanitize(newEntry.description)}</p>
+    <hr>
+  `;
+  displayArea.appendChild(entryElement);
+
+  // Reset form
+  form.reset();
 });
+
 
 //slider
 let items = document.querySelectorAll('.slider .item');
