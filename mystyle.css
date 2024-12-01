@@ -512,7 +512,7 @@ footer .footer-content h4{
     background-color: inherit;
     border-radius: 15px;
     width: 50%;
-    animation: appear 5s linear;
+    animation: appear 0.5s linear;
     animation-timeline: view() ;
     animation-range: entry 0% cover 25%;
 }
@@ -651,6 +651,7 @@ footer .footer-content h4{
         width: 90%;
         margin: 15px auto;
         text-align: center;
+        animation: appear 0s linear;
     }
 
     .textbox {
@@ -672,6 +673,7 @@ footer .footer-content h4{
     .container {
         flex-direction: column;
         width: 90%;
+        animation: appear 0s linear;
     }
 
     .textbox {
