@@ -445,6 +445,13 @@ footer .footer-content h4{
     position: relative;
 }
 
+/* ตัว*แดง */
+.required {
+    padding: 3px;
+    color: red;
+    font-weight: bold;
+}
+
 .error {
     color: darkred;
     display: block;
