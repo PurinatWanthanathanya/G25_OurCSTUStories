@@ -51,7 +51,7 @@ form.addEventListener('submit', (event) => {
       <p><strong>เพศ:</strong> ${newEntry.email}</p>
       <p><strong>ความพึงพอใจต่อเว็บไซต์:</strong> ${newEntry.satisfaction}</p>
       <p><strong>ข้อเสนอแนะ / ความคิดเห็น:</strong> ${newEntry.description}</p>
-      <p>=====================================================</p>
+      <p>=======================================</p>
     `;
     displayArea.appendChild(entryElement);
 
