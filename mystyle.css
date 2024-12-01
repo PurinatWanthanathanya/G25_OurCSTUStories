@@ -253,19 +253,19 @@ section {
     font-size: 30px;
 }
 
-.slide .pooh{
+.slide .data{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.pooh .name {
+.data .name {
     font-size: 14px;
     font-weight: 600;
     color: #000;
 
 }
 
-.pooh .stnumber {
+.data .stnumber {
     font-size: 13px;
     font-weight: 400;
     color: #000;
