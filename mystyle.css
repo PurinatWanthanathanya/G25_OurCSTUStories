@@ -361,6 +361,8 @@ footer .footer-content h4{
 #display-area p {
   margin: 5px 0;
   color: whitesmoke;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .display-area_container {
