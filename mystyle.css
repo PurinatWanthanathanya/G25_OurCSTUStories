@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
 * {
     margin: 0;
@@ -884,4 +885,7 @@ body {
     #next {
         right: 20px; 
     }
+}
+.nameh {
+    font-family: "Monoton", sans-serif;
 }
