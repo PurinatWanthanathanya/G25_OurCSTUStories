@@ -860,17 +860,17 @@ body {
 @media (max-width: 768px) {
     #next,
     #prev {
-        position: fixed; /* Keeps buttons visible on mobile */
-        top: 50%; /* Adjust placement */
+       
+        top: 50%;
         transform: translateY(-50%);
-        font-size: xxx-large; /* Adjust size for smaller screens */
+        font-size: xxx-large;
     }
 
     #prev {
-        left: 20px; /* Align to the left */
+        left: 20px; 
     }
 
     #next {
-        right: 20px; /* Align to the right */
+        right: 20px; 
     }
 }
