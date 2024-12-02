@@ -665,7 +665,9 @@ footer .footer-content h4 {
     text-align: center;
     font-size: 40px;
     color: rgb(255, 255, 255);
-    animation: flip 3s;
+    cursor: pointer;
+    animation: flip 3s ease;
+    transition: transform 1s ease;
 }
 
 .OFH {
