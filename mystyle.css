@@ -835,7 +835,9 @@ body {
 
 
 
-#next, #prev{
+/* Desktop  */
+#next,
+#prev {
     position: absolute;
     top: 40%;
     color: #fff;
@@ -844,10 +846,31 @@ body {
     font-size: xxx-large;
     font-family: monospace;
     font-weight: bold;
-    left: 400px;
 }
-#next{
-    left: unset;
+
+#next {
     right: 400px;
 }
 
+#prev {
+    left: 400px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #next,
+    #prev {
+        position: fixed; /* Keeps buttons visible on mobile */
+        top: 50%; /* Adjust placement */
+        transform: translateY(-50%);
+        font-size: xxx-large; /* Adjust size for smaller screens */
+    }
+
+    #prev {
+        left: 20px; /* Align to the left */
+    }
+
+    #next {
+        right: 20px; /* Align to the right */
+    }
+}
