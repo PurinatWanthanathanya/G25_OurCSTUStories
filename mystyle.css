@@ -131,6 +131,17 @@ header .dropdown_menu li {
     }
 }
 
+@media (max-width:1000px) {
+    header .dropdown_menu{
+        font-size: 18px;
+    }
+
+    header .dropdown_menu.open{
+        height: 160px;
+    }
+}
+
+
 @media (max-width:578px) {
     header .dropdown_menu {
         left: 2rem;
