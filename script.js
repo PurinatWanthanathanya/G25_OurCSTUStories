@@ -30,19 +30,19 @@ form.addEventListener('submit', (event) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (fullname.split(' ').filter(part => part).length !== 2) {
-    errors.push('กรุณากรอกชื่อ-นามสกุลให้ถูกต้อง');
+    errors.push('<span class="required">*</span>กรุณากรอกชื่อ-นามสกุลให้ถูกต้อง<span class="required">*</span>');
   }
 
   if (!emailRegex.test(email)) {
-    errors.push('กรุณาใส่อีเมลล์ให้ถูกต้อง');
+    errors.push('<span class="required">*</span>กรุณาใส่อีเมลล์ให้ถูกต้อง<span class="required">*</span>');
   }
 
   if (!genderElement) {
-    errors.push('กรุณาเลือกเพศของคุณ');
+    errors.push('<span class="required">*</span>กรุณาเลือกเพศของคุณ<span class="required">*</span>');
   }
 
   if (!satisfaction) {
-    errors.push('กรุณาเลือกความพึงพอใจต่อเว็บไซต์');
+    errors.push('<span class="required">*</span>กรุณาเลือกความพึงพอใจต่อเว็บไซต์<span class="required">*</span>');
   }
 
   if (errors.length > 0) {
@@ -66,11 +66,14 @@ form.addEventListener('submit', (event) => {
   entryCount++;
   entries.push(newEntry);
 
-  showMessage('success', ['ยินดีต้อนรับ !']);
+  showMessage('success', ['<span class="msgsuccess">ยินดีต้อนรับ !</span>']);
 
   const displayArea = document.getElementById('display-area');
   const sanitize = (str) => str.replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const entryElement = document.createElement('div');
+
+  entryElement.classList.add('entry-class');
+
   entryElement.innerHTML = `
       <p><strong>ผู้เยี่ยมชมคนที่:</strong> ${newEntry.count}</p>
       <p><strong>ชื่อ-นามสกุล:</strong> ${sanitize(newEntry.fullname)}</p>

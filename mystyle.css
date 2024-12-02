@@ -490,10 +490,22 @@ footer .footer-content h4 {
     font-weight: bold;
 }
 
+.msgsuccess{
+    padding: 3px;
+    color: greenyellow;
+}
+
 .error {
     color: darkred;
     display: block;
     margin-top: 5px;
+}
+
+.entry-class {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    border-radius: 20px; 
 }
 
 #display-area {
@@ -530,6 +542,9 @@ footer .footer-content h4 {
     display: flex;
     justify-content: center;
     font-family: 'Kanit';
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
 }
 
 .message .success {
