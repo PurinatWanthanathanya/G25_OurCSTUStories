@@ -1,4 +1,4 @@
-// ส่วนของ form
+// Existing form functionality
 const form = document.getElementById('form');
 
 const entries = [];
@@ -87,9 +87,7 @@ form.addEventListener('submit', (event) => {
   form.reset();
 });
 
-
-
-//slider
+// Existing slider functionality
 let items = document.querySelectorAll('.slider .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
@@ -128,3 +126,16 @@ prev.onclick = function () {
   active = (active - 1 + items.length) % items.length;
   loadShow();
 }
+
+
+document.querySelector('.idiom').addEventListener('click', function() {
+
+  this.style.transition = 'transform 1s ease';
+  this.style.transform = 'rotateY(180deg)';
+
+
+  setTimeout(() => {
+    this.style.transform = 'rotateY(0deg)';
+  }, 1000);
+});
+

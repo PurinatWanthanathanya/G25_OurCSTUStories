@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         behavior: 'smooth'
       });
     }
-  
+    
   
     window.addEventListener('scroll', toggleButtonVisibility);
   
