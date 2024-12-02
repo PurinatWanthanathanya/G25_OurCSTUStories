@@ -1,7 +1,18 @@
 // ส่วนของ form
 const form = document.getElementById('form');
+
 const entries = [];
 let entryCount = 1;
+
+const showMessage = (id, messages = [], show = true) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.style.display = show ? 'block' : 'none';
+    if (messages.length > 0) {
+      element.innerHTML = messages.join('<br>');
+    }
+  }
+};
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -12,31 +23,30 @@ form.addEventListener('submit', (event) => {
   const satisfaction = document.getElementById('satisfaction').value;
   const description = document.getElementById('description').value;
 
+  showMessage('success', [], false);
+  showMessage('danger', [], false);
+
   const errors = [];
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // Validate fullname
   if (fullname.split(' ').filter(part => part).length !== 2) {
     errors.push('กรุณากรอกชื่อ-นามสกุลให้ถูกต้อง');
   }
 
-  // Validate email
   if (!emailRegex.test(email)) {
     errors.push('กรุณาใส่อีเมลล์ให้ถูกต้อง');
   }
 
-  // Validate gender
   if (!genderElement) {
     errors.push('กรุณาเลือกเพศของคุณ');
   }
 
-  // Validate satisfaction
   if (!satisfaction) {
-    errors.push('โปรดเลือกความพึงพอใจต่อเว็บไซต์');
+    errors.push('กรุณาเลือกความพึงพอใจต่อเว็บไซต์');
   }
 
   if (errors.length > 0) {
-    alert(errors.join('\n'));
+    showMessage('danger', errors);
     return;
   }
 
@@ -44,9 +54,7 @@ form.addEventListener('submit', (event) => {
   if (!confirmSubmission) {
     return;
   }
-
   const gender = genderElement.value;
-
   const newEntry = {
     count: entryCount,
     fullname,
@@ -58,24 +66,24 @@ form.addEventListener('submit', (event) => {
   entryCount++;
   entries.push(newEntry);
 
-  // Display the new entry
+  showMessage('success', ['ยินดีต้อนรับ !']);
+
   const displayArea = document.getElementById('display-area');
   const sanitize = (str) => str.replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const entryElement = document.createElement('div');
   entryElement.innerHTML = `
-    <p><strong>ผู้เยี่ยมชมคนที่:</strong> ${newEntry.count}</p>
-    <p><strong>ชื่อ-นามสกุล:</strong> ${sanitize(newEntry.fullname)}</p>
-    <p><strong>เพศ:</strong> ${sanitize(newEntry.gender)}</p>
-    <p><strong>อีเมล:</strong> ${sanitize(newEntry.email)}</p>
-    <p><strong>ความพึงพอใจต่อเว็บไซต์:</strong> ${sanitize(newEntry.satisfaction)}</p>
-    <p><strong>ข้อเสนอแนะ / ความคิดเห็น:</strong> ${sanitize(newEntry.description)}</p>
-    <hr>
+      <p><strong>ผู้เยี่ยมชมคนที่:</strong> ${newEntry.count}</p>
+      <p><strong>ชื่อ-นามสกุล:</strong> ${sanitize(newEntry.fullname)}</p>
+      <p><strong>เพศ:</strong> ${sanitize(newEntry.gender)}</p>
+      <p><strong>อีเมล:</strong> ${sanitize(newEntry.email)}</p>
+      <p><strong>ความพึงพอใจต่อเว็บไซต์:</strong> ${sanitize(newEntry.satisfaction)}</p>
+      <p><strong>ข้อเสนอแนะ / ความคิดเห็น:</strong> ${sanitize(newEntry.description)}</p>
+      <hr>
   `;
   displayArea.appendChild(entryElement);
-
-  // Reset form
   form.reset();
 });
+
 
 
 //slider

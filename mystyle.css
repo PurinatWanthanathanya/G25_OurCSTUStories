@@ -65,14 +65,14 @@ header .nav li:last-child {
     margin-right: 0;
 }
 
-header .toggle_btn{
+header .toggle_btn {
     color: #fff;
     font-size: 2rem;
     cursor: pointer;
     display: none;
 }
 
-header .dropdown_menu{
+header .dropdown_menu {
     position: absolute;
     right: 2rem;
     top: 70px;
@@ -87,13 +87,13 @@ header .dropdown_menu{
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-header .dropdown_menu.open{
+header .dropdown_menu.open {
     height: 120px;
 }
 
-header .dropdown_menu li{
+header .dropdown_menu li {
     padding: 0.7rem;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -102,21 +102,22 @@ header .dropdown_menu li{
     header {
         padding: 1rem 3rem;
     }
-    header .nav{
+
+    header .nav {
         display: none;
     }
 
-    header .toggle_btn{
+    header .toggle_btn {
         display: block;
     }
 
-    header .dropdown_menu{
+    header .dropdown_menu {
         display: block;
     }
 }
 
-@media (max-width:578px){
-    header .dropdown_menu{
+@media (max-width:578px) {
+    header .dropdown_menu {
         left: 2rem;
         width: unset;
         font-size: 15px;
@@ -234,6 +235,7 @@ section {
 }
 
 @media (max-width:800px) {
+
     /* ปรับขนาดวิดีโอ */
     .box {
         height: fit-content;
@@ -265,33 +267,34 @@ section {
         padding: .5rem 1rem;
     }
 }
-}
+
 
 /*home.html ของแต่ละคน*/
 
-.contianerdata{
+.contianerdata {
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.section1{
+
+.section1 {
     position: relative;
     max-width: 900px;
     width: 100%;
-    padding: 50px 0  ;
+    padding: 50px 0;
     background-color: #ffffff;
 }
 
-.section1 .images{
+.section1 .images {
     height: 180px;
     width: 180px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.section1 .slide{
+.section1 .slide {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -299,22 +302,23 @@ section {
     row-gap: 20px;
 }
 
-.slide p{
+.slide p {
     text-align: center;
     padding: 0 160px;
     font-size: 14px;
     font-weight: 400;
 }
 
-.slide .bxs-down-arrow{
+.slide .bxs-down-arrow {
     font-size: 30px;
 }
 
-.slide .data{
+.slide .data {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .data .name {
     font-size: 14px;
     font-weight: 600;
@@ -331,7 +335,7 @@ section {
 
 /* ส่วนของ footer */
 
-footer{
+footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     gap: 3.5rem;
@@ -339,34 +343,34 @@ footer{
     padding: 1rem;
 }
 
-footer .footer-content h4{
+footer .footer-content h4 {
     color: #fff;
     margin-bottom: 1rem;
     font-size: 20px;
 }
 
-.footer-content img{
-    width:40px;
+.footer-content img {
+    width: 40px;
     vertical-align: middle;
     margin-right: .5rem;
     margin-bottom: .5rem;
     margin-left: 1rem;
 }
 
-.footer-content h3{
-    display:inline;
+.footer-content h3 {
+    display: inline;
     font-size: 16px;
     margin: 0;
     color: #fff;
 
 }
 
-.footer-content p{
+.footer-content p {
     color: #fff;
 
 }
 
-.footer-content a{
+.footer-content a {
     display: inline-block;
     color: #fff;
     margin-right: .5rem;
@@ -374,25 +378,25 @@ footer .footer-content h4{
     transition: all .40s ease;
 }
 
-.footer-content a:hover{
+.footer-content a:hover {
     color: #c62922;
     transform: translateY(-3px) translateX(-5px);
 }
 
-.footer-content i{
+.footer-content i {
     margin-right: 1rem;
     font-size: 22px;
     color: #fff;
 }
 
-@media (max-width:1690px){
-    footer{
-        padding:3rem 5% 2rem
+@media (max-width:1690px) {
+    footer {
+        padding: 3rem 5% 2rem
     }
 }
 
-@media (max-width:1120px){
-    footer{
+@media (max-width:1120px) {
+    footer {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, auto));
         gap: 2rem;
@@ -403,21 +407,26 @@ footer .footer-content h4{
 
 .form-container {
     max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 10px auto;
+    padding: 25px;
     border: 1px solid #c62922;
-    border-radius: 5px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-container h1 {
     text-align: center;
     margin-bottom: 20px;
     color: whitesmoke;
+    font-family: 'Kanit';
 }
 
 .form-group {
     margin-bottom: 15px;
     color: whitesmoke;
+    position: relative;
+    font-family: 'Kanit';
 }
 
 .form-group label {
@@ -435,6 +444,7 @@ footer .footer-content h4{
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-family: 'Kanit';
 }
 
 .form-group input[type="radio"] {
@@ -451,16 +461,15 @@ footer .footer-content h4{
 }
 
 .form-group input[type="submit"] {
-    background-color: #ca6f25;
+    background-color: #c62922;
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-
-.form-group {
-    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    font-family: 'Kanit';
 }
 
 /* ตัว*แดง */
@@ -477,16 +486,16 @@ footer .footer-content h4{
 }
 
 #display-area {
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
 }
 
 #display-area p {
-  margin: 5px 0;
-  color: whitesmoke;
-
+    margin: 5px 0;
+    color: whitesmoke;
+    font-family: 'Kanit';
 }
 
 .display-area_container {
@@ -501,7 +510,38 @@ footer .footer-content h4{
     text-align: center;
     margin-bottom: 20px;
     color: whitesmoke;
+    font-family: 'Kanit';
 }
+
+.message {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-family: 'Kanit';
+}
+
+.message .success {
+    font-size: 16px;
+    line-height: 1;
+    display: none;
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.message .danger,
+.message .fullname_alert,
+.message .email_alert,
+.message .gender_alert,
+.message .satisfaction_alert {
+    font-size: 16px;
+    line-height: 1.75;
+    display: none;
+    color: white;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
 /* ส่วนของ OurFutureHilights */
 .container {
     display: flex;
@@ -513,16 +553,17 @@ footer .footer-content h4{
     border-radius: 15px;
     width: 50%;
     animation: appear 0.5s linear;
-    animation-timeline: view() ;
+    animation-timeline: view();
     animation-range: entry 0% cover 25%;
 }
 
 @keyframes appear {
-    from{
+    from {
         opacity: 0;
         scale: 0.5;
     }
-    to{
+
+    to {
         opacity: 1;
         scale: 1;
     }
@@ -601,43 +642,45 @@ footer .footer-content h4{
     background-position: center;
     min-height: 100vh;
 }
-#sixth{
+
+#sixth {
     margin-bottom: 100px;
 }
 
 /* ปุ่มเลื่อนกลับ */
 
-.backtotopbutton{
+.backtotopbutton {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #332d2db9;
-    color:#fff;
+    color: #fff;
     padding: .75rem 1.25rem;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     text-transform: capitalize;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.25s ease 0s;
 }
 
-.backtotopbutton img{
+.backtotopbutton img {
     width: 1rem;
     display: none;
 }
 
-.backtotopbutton:hover{
+.backtotopbutton:hover {
     background-color: #c01313;
     opacity: 0.8;
     padding: 10px 14px;
 }
 
-@media (max-width:720px){
-    .backtotopbutton img{
+@media (max-width:720px) {
+    .backtotopbutton img {
         display: block;
     }
-    .backtotopbutton p{
+
+    .backtotopbutton p {
         display: none;
     }
 }
@@ -705,13 +748,14 @@ footer .footer-content h4{
 
 
 /* index */
-.slider{
+.slider {
     position: relative;
     width: 100%;
     height: 370px;
     overflow: hidden;
 }
-.item{
+
+.item {
     position: absolute;
     width: 200px;
     height: 320px;
@@ -723,7 +767,9 @@ footer .footer-content h4{
     left: calc(50% - 110px);
     top: 0;
 }
-#next, #prev{
+
+#next,
+#prev {
     position: absolute;
     top: 40%;
     color: #fff;
@@ -734,7 +780,8 @@ footer .footer-content h4{
     font-weight: bold;
     left: 400px;
 }
-#next{
+
+#next {
     left: unset;
     right: 400px;
 }
