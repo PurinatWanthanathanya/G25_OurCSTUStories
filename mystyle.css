@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 * {
     margin: 0;
@@ -15,6 +17,10 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.nav {
+    font-family: "Audiowide", sans-serif;
 }
 
 header {
@@ -631,10 +637,11 @@ footer .footer-content h4 {
 }
 
 .idiom {
+    font-family: "Audiowide", sans-serif;
     margin-bottom: 80px;
     margin-top: 150px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 40px;
     color: rgb(255, 255, 255);
 }
 
