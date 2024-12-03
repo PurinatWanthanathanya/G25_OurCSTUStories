@@ -37,27 +37,7 @@ document.getElementById('email').addEventListener('input', () => {
   }
 });
 
-document.querySelectorAll('input[name="gender"]').forEach((element) => {
-  element.addEventListener('change', () => {
-    const genderError = document.getElementById('gender_alert');
-    if (!document.querySelector('input[name="gender"]:checked')) {
-      genderError.textContent = 'กรุณาเลือกเพศของคุณ';
-    } else {
-      genderError.textContent = '';
-    }
-  });
-});
-
-document.getElementById('satisfaction').addEventListener('change', () => {
-  const satisfaction = document.getElementById('satisfaction').value;
-  const satisfactionError = document.getElementById('satisfaction_alert');
-  if (!satisfaction) {
-    satisfactionError.textContent = 'กรุณาเลือกความพึงพอใจต่อเว็บไซต์';
-  } else {
-    satisfactionError.textContent = '';
-  }
-});
-
+// submit button form
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
