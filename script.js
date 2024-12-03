@@ -14,6 +14,50 @@ const showMessage = (id, messages = [], show = true) => {
   }
 };
 
+// ฟังก์ชั่นเช็คแบบ realtime
+document.getElementById('fullname').addEventListener('input', () => {
+  const fullname = document.getElementById('fullname').value.trim();
+  const fullnameError = document.getElementById('fullnameError');
+  if (fullname.split(' ').filter(part => part).length !== 2) {
+    fullnameError.textContent = 'กรุณากรอกชื่อ-นามสกุลให้ถูกต้อง';
+  } else {
+    fullnameError.textContent = '';
+  }
+});
+
+
+document.getElementById('email').addEventListener('input', () => {
+  const email = document.getElementById('email').value.trim();
+  const emailError = document.getElementById('emailError');
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    emailError.textContent = 'กรุณาใส่อีเมลล์ให้ถูกต้อง';
+  } else {
+    emailError.textContent = '';
+  }
+});
+
+document.querySelectorAll('input[name="gender"]').forEach((element) => {
+  element.addEventListener('change', () => {
+    const genderError = document.getElementById('gender_alert');
+    if (!document.querySelector('input[name="gender"]:checked')) {
+      genderError.textContent = 'กรุณาเลือกเพศของคุณ';
+    } else {
+      genderError.textContent = '';
+    }
+  });
+});
+
+document.getElementById('satisfaction').addEventListener('change', () => {
+  const satisfaction = document.getElementById('satisfaction').value;
+  const satisfactionError = document.getElementById('satisfaction_alert');
+  if (!satisfaction) {
+    satisfactionError.textContent = 'กรุณาเลือกความพึงพอใจต่อเว็บไซต์';
+  } else {
+    satisfactionError.textContent = '';
+  }
+});
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
@@ -30,11 +74,11 @@ form.addEventListener('submit', (event) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (fullname.split(' ').filter(part => part).length !== 2) {
-    errors.push('<span class="required">*</span>กรุณากรอกชื่อ-นามสกุลให้ถูกต้อง<span class="required">*</span>');
+    errors.push('<span class="required">*</span>กรุณากรอกชื่อ-นามสกุล<span class="required">*</span>');
   }
 
   if (!emailRegex.test(email)) {
-    errors.push('<span class="required">*</span>กรุณาใส่อีเมลล์ให้ถูกต้อง<span class="required">*</span>');
+    errors.push('<span class="required">*</span>กรุณากรอกอีเมลล์<span class="required">*</span>');
   }
 
   if (!genderElement) {

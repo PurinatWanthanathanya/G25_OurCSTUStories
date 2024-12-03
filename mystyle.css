@@ -706,9 +706,11 @@ footer .footer-content h4 {
 }
 
 .error {
-    color: darkred;
+    color: rgb(185, 2, 2);
     display: block;
-    margin-top: 5px;
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
 }
 
 .entry-class {
