@@ -383,6 +383,11 @@ section {
     font-size: 18px;
 }
 
+.data i:hover{
+    color: rgb(224, 121, 121);
+    font-size: 20px;
+}
+
 .data a{
     font-size: 18px;
     margin-bottom: .5rem;
@@ -830,6 +835,10 @@ footer .footer-content h4 {
     position: relative;
 }
 
+.textbox p{
+    font-size: 16px;
+}
+
 /* ลูกศรกล่องคำพูด */
 .textbox::before {
     content: '';
@@ -976,7 +985,7 @@ footer .footer-content h4 {
 
     .idiom {
         padding: 30px;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 
     .container img {
