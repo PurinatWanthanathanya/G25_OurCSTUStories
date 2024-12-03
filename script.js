@@ -50,11 +50,24 @@ form.addEventListener('submit', (event) => {
     return;
   }
 
-  const confirmSubmission = confirm('คุณต้องการยืนยันข้อมูลหรือไม่?');
-  if (!confirmSubmission) {
-    return;
-  }
-  const gender = genderElement.value;
+  const modal = document.getElementById('custom-modal');
+  modal.style.display = 'block';
+
+  const confirmYes = document.getElementById('confirm-yes');
+  const confirmNo = document.getElementById('confirm-no');
+
+  confirmYes.onclick = () => {
+    modal.style.display = 'none'; 
+    processSubmission(fullname, genderElement.value, email, satisfaction, description); 
+  };
+
+  confirmNo.onclick = () => {
+    modal.style.display = 'none';
+  };
+});
+
+
+function processSubmission(fullname, gender, email, satisfaction, description) {
   const newEntry = {
     count: entryCount,
     fullname,
@@ -85,7 +98,7 @@ form.addEventListener('submit', (event) => {
   `;
   displayArea.appendChild(entryElement);
   form.reset();
-});
+};
 
 // Existing slider functionality
 let items = document.querySelectorAll('.slider .item');
